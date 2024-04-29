@@ -21,7 +21,7 @@ function OtpVerification() {
       },
       onSubmit: async (values,{resetForm}) => {
         try{
-          const res = await axios.get(`https://password-reset-ipux.onrender.com/verifyotp`,values)
+          const res = await axios.get("https://password-reset-ipux.onrender.com/verifyotp",values)
           alert(res.data.message)
           resetForm();  
           navigate(`/newpassword/${values.mailid}`)

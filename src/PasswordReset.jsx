@@ -18,7 +18,7 @@ function PasswordReset() {
       },
       onSubmit: async (values,{resetForm}) => {
         try{
-          values.otplink=`http://localhost:5173/otpverification/${passwordReset.values.mailid}`
+          values.otplink=`https://stellar-biscuit-e3c765.netlify.app/otpverification/${passwordReset.values.mailid}`
           const res = await axios.post("https://password-reset-ipux.onrender.com/userbymailid",values)
           alert(res.data.message)
           resetForm();  

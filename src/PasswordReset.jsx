@@ -22,10 +22,10 @@ function PasswordReset() {
           const res = await axios.post("https://password-reset-ipux.onrender.com/userbymailid",values)
           alert(res.data.message)
           resetForm();  
+          navigate(`/otpverification/${values.mailid}`)
         }catch(error){
           alert(error.response.data.message)
         }
-        navigate(`/otpverification/${values.mailid}`)
       },
     });
     return (

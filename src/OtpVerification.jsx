@@ -24,10 +24,10 @@ function OtpVerification() {
           const res = await axios.get(`https://password-reset-ipux.onrender.com/verifyotp`,values)
           alert(res.data.message)
           resetForm();  
+          navigate(`/newpassword/${values.mailid}`)
         }catch(error){
           alert(error.response.data.message)
         }
-        navigate(`/newpassword/${values.mailid}`)
       },
     });
     return (

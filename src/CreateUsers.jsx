@@ -97,7 +97,7 @@ function CreateUsers() {
               type="text"
               className="form-control"
               id="contactno"
-              placeholder="CCONTACT NUMBER"
+              placeholder="CONTACT NUMBER"
               value={userCreation.values.contactno}
               onChange={userCreation.handleChange}
             />
